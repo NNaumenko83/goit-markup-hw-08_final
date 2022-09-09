@@ -1,0 +1,53 @@
+.header {
+	border-bottom: 1px solid $header-border-line-color;
+}
+
+@media (max-width: 767.5px) {
+	.menu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 767.5px) {
+	.header__container {
+		position: relative;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.header__container {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.menu-button {
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.menu-button .icon-cross {
+	display: none;
+}
+.menu-button.is-open .icon-cross {
+	display: block;
+}
+
+.menu-button.is-open .icon-menu {
+	display: none;
+}
+
+@media screen and (max-width: 767.5px) {
+	.site-nav {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 767.5px) {
+	.header__contacts {
+		display: none;
+	}
+}

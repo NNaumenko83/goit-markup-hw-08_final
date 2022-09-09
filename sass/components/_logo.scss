@@ -1,0 +1,47 @@
+.logo {
+	@extend %link;
+
+	display: block;
+	font-family: $second-font-family;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.17;
+
+	@media screen and (min-width: 1200px) {
+		font-size: 26px;
+		line-height: 1.19;
+	}
+}
+
+.logo__word-web {
+	color: $logo-first-color;
+}
+
+.logo__word-studio {
+	color: $logo-second-color;
+
+	&--inverse {
+		color: $logo-second-color-inverse;
+	}
+}
+
+.header_logo {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+	.header_logo {
+		margin-right: 87px;
+		padding-top: 26px;
+		padding-bottom: 26px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.header_logo {
+		margin-right: 93px;
+		padding-top: 24px;
+		padding-bottom: 25px;
+	}
+}

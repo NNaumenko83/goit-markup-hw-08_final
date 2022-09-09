@@ -1,0 +1,28 @@
+.footer__adress {
+	max-width: 480px;
+}
+
+.adress-list {
+	@extend %list;
+}
+
+.adress-list__item:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+.adress-list__link {
+	@extend %link;
+	@extend %transition;
+	color: $second-text-color;
+	font-size: inherit;
+	line-height: 1.71;
+
+	&--light {
+		color: $third-text-color;
+	}
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}

@@ -1,0 +1,100 @@
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 400px;
+	max-width: 767px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url("../images/Mobile-images/Hero-img-optim-480.jpg");
+
+	background-color: $hero-background-color;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+	.hero {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/Mobile-images/Hero-img-optim-960.jpg");
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hero {
+		max-width: 1199px;
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/Tablet-images/Hero-img-768-min.jpg");
+		@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url("../images/Tablet-images/Hero-img-1536-min.jpg");
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.hero {
+		height: 600px;
+		max-width: 1600px;
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/Desktop-images/Hero-img-1600-min.jpg");
+		@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url("../images/Desktop-images/Hero-img-3200-min.jpg");
+		}
+	}
+}
+
+.hero__title {
+	max-width: 360px;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+
+	font-weight: 900;
+	font-size: 26px;
+	line-height: 1.62;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+
+	color: $third-text-color;
+
+	@media screen and (min-width: 1200px) {
+		max-width: 696px;
+
+		font-weight: 900;
+		font-size: 44px;
+		line-height: 1.36;
+	}
+}
+
+.hero__btn {
+	@extend %button;
+
+	padding: 10px 24px;
+
+	color: $accent-button-text-color;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+
+	letter-spacing: 0.06em;
+	background-color: $accent-color;
+
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+	@media screen and (min-width: 1200px) {
+		padding: 10px 32px;
+	}
+}
