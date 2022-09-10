@@ -51,13 +51,16 @@
 .projects-set__link {
 	@extend %link;
 
-	display: block;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 
 	@extend %transition;
 
 	&:hover,
 	&:focus {
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+		transform: scale(1.05);
 	}
 }
 
@@ -101,7 +104,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-	.projects-set__label--big {
-		padding-bottom: 56px;
+	.projects-set__label {
+		flex-grow: 1;
 	}
 }

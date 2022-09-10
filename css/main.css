@@ -775,6 +775,22 @@ body {
   transform: translate(-50%, -50%) scale(1.3);
 }
 
+@-webkit-keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .modal__close-button {
   position: absolute;
   top: 8px;
@@ -782,6 +798,10 @@ body {
 }
 .modal__close-button:hover, .modal__close-button:focus {
   color: #2196f3;
+}
+.modal__close-button:hover .rotate-center, .modal__close-button:focus .rotate-center {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
 }
 
 .modal__text {
@@ -1289,10 +1309,13 @@ body {
 }
 
 .projects-set__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .projects-set__link:hover, .projects-set__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transform: scale(1.05);
 }
 
 .projects-set__box {
@@ -1322,7 +1345,7 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .projects-set__label--big {
-    padding-bottom: 56px;
+  .projects-set__label {
+    flex-grow: 1;
   }
 }/*# sourceMappingURL=main.css.map */
